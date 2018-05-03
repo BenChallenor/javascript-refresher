@@ -49,12 +49,12 @@ var addElementToBeginning = function(array, element) {
 
 var sortByLastLetter = function(array) {
   return array.sort(function(a, b) {
-    return a[a.length-1] > b[b.length-1];
-});
+    return a[a.length - 1] > b[b.length - 1];
+  });
 }
 
 var getFirstHalf = function(string) {
-  var stringLength = Math.ceil(string.length/2);
+  var stringLength = Math.ceil(string.length / 2);
   return string.split('', stringLength).join("");
 }
 
@@ -63,23 +63,33 @@ var makeNegative = function(number) {
 }
 
 var numberOfPalindromes = function(array) {
-  return 'Write your method here';
+  palindromes = [];
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] == array[i].split('').reverse().join('')) {
+      palindromes.push(array[i]);
+    }
+  }
+  return palindromes.length;
 }
 
 var shortestWord = function(array) {
-  return 'Write your method here';
-}
+  return array.sort(function(a, b) {
+    return a.length > b.length })[0];
+};
 
 var longestWord = function(array) {
-  return 'Write your method here';
-}
+  return array.sort(function(a, b) {
+    return a.length < b.length })[0];
+};
 
 var sumNumbers = function(array) {
-  return 'Write your method here';
+  return array.reduce(function(a, b) {
+    return a + b;
+  });
 }
 
 var repeatElements = function(array) {
-  return 'Write your method here';
+  return (array + "," + array).split(",");
 }
 
 var stringToNumber = function(string) {
