@@ -39,23 +39,27 @@ var everyPossiblePair = function(array) {
 }
 
 var allElementsExceptFirstThree = function(array) {
-  return 'Write your method here';
+  return array.slice(3);
 }
 
 var addElementToBeginning = function(array, element) {
-  return 'Write your method here';
+  array.unshift(element);
+  return array;
 }
 
 var sortByLastLetter = function(array) {
-  return 'Write your method here';
+  return array.sort(function(a, b) {
+    return a[a.length-1] > b[b.length-1];
+});
 }
 
 var getFirstHalf = function(string) {
-  return 'Write your method here';
+  var stringLength = Math.ceil(string.length/2);
+  return string.split('', stringLength).join("");
 }
 
 var makeNegative = function(number) {
-  return 'Write your method here';
+  return -Math.abs(number);
 }
 
 var numberOfPalindromes = function(array) {
