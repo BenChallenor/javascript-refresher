@@ -74,12 +74,14 @@ var numberOfPalindromes = function(array) {
 
 var shortestWord = function(array) {
   return array.sort(function(a, b) {
-    return a.length > b.length })[0];
+    return a.length > b.length
+  })[0];
 };
 
 var longestWord = function(array) {
   return array.sort(function(a, b) {
-    return a.length < b.length })[0];
+    return a.length < b.length
+  })[0];
 };
 
 var sumNumbers = function(array) {
@@ -93,15 +95,24 @@ var repeatElements = function(array) {
 }
 
 var stringToNumber = function(string) {
-  return 'Write your method here';
+  return parseInt(string);
 }
 
 var calculateAverage = function(array) {
-  return 'Write your method here';
+  var sum = array.reduce(function(a, b) {
+    return a + b
+  });
+  return sum / array.length;
 }
 
 var getElementsUntilGreaterThanFive = function(array) {
-  return 'Write your method here';
+  var i = 0;
+  var greaterThanFive = [];
+  while (array[i] <= 5 ) {
+    greaterThanFive.push(array[i]);
+    i++
+  }
+  return greaterThanFive;
 }
 
 var convertArrayToObject = function(array) {
@@ -125,7 +136,7 @@ var removeCapitals = function(string) {
 }
 
 var roundUp = function(number) {
-  return 'Write your method here';
+  return Math.ceil(number);
 }
 
 var formatDateNicely = function(date) {
@@ -145,7 +156,7 @@ var checkForSpecialCharacters = function(string) {
 }
 
 var squareRoot = function(number) {
-  return 'Write your method here';
+  return Math.sqrt(number);
 }
 
 var factorial = function(number) {
