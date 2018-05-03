@@ -1,26 +1,38 @@
-var selectElementsStartingWithA = function(array) {
-  return 'Write your method here';
-}
+var selectElementsStartingWithA = function(element) {
+  return array.filter(function(element) {
+    return element[0] == "a";
+  });
+};
 
 var selectElementsStartingWithA = function(array) {
-  return 'Write your method here';
-}
+  return array.filter(function(element) {
+    return element[0] == "a";
+  });
+};
 
 var selectElementsStartingWithVowel = function(array) {
-  return 'Write your method here';
-}
+  return array.filter(function(element) {
+    return element.match(/^[aeiou]/);
+  });
+};
 
 var removeNullElements = function(array) {
-  return 'Write your method here';
-}
+  return array.filter(function(element) {
+    return element !== null;
+  });
+};
 
 var removeNullAndFalseElements = function(array) {
-  return 'Write your method here';
-}
+  return array.filter(function(element) {
+    return (element !== null && element !== false);
+  });
+};
 
 var reverseWordsInArray = function(array) {
-  return 'Write your method here';
-}
+  return array.map(function(element) {
+    return element.split("").reverse().join("");
+  });
+};
 
 var everyPossiblePair = function(array) {
   return 'Write your method here';
