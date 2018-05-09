@@ -116,8 +116,13 @@ var getElementsUntilGreaterThanFive = function(array) {
 }
 
 var convertArrayToObject = function(array) {
-  return 'Write your method here';
+  var obj = {};
+  for (var i = 0; i < array.length-1; i+=2) {
+    obj[array[i]] = array[i+1];
+  }
+  return obj;
 }
+
 
 var getAllLetters = function(array) {
   return 'Write your method here';
@@ -132,7 +137,7 @@ var sumKeysAndValues = function(object) {
 }
 
 var removeCapitals = function(string) {
-  return 'Write your method here';
+  return string.replace(/[A-Z]+/g, '');
 }
 
 var roundUp = function(number) {
@@ -140,7 +145,7 @@ var roundUp = function(number) {
 }
 
 var formatDateNicely = function(date) {
-  return 'Write your method here';
+  return date.toLocaleDateString();
 }
 
 var getDomainName = function(string) {
@@ -148,11 +153,12 @@ var getDomainName = function(string) {
 }
 
 var titleize = function(string) {
-  return 'Write your method here';
+  return string;
 }
 
 var checkForSpecialCharacters = function(string) {
-  return 'Write your method here';
+  var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+  return format.test(string);
 }
 
 var squareRoot = function(number) {
